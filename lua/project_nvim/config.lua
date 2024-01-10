@@ -16,6 +16,11 @@ M.defaults = {
   -- detection_methods
   patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
 
+  -- Directories here will always be included in project results
+  -- Ex: a single directory "~/projects/project.nvim"
+  -- Ex: all directories inside a projects directory "~/projects/*"
+  include_dirs = {},
+
   -- Table of lsp clients to ignore by name
   -- eg: { "efm", ... }
   ignore_lsp = {},
@@ -35,7 +40,7 @@ M.defaults = {
   -- * global (default)
   -- * tab
   -- * win
-  scope_chdir = 'global',
+  scope_chdir = "global",
 
   -- Path where project.nvim will store the project history for use in
   -- telescope
